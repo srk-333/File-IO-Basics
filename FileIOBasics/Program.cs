@@ -23,6 +23,8 @@ namespace FileIOBasics
             file.ReadAllLinesFromFile(path);
             file.ReadAllTextFromFile(path);
             file.CopyFileSourceToDest(path);
+            file.FileReadUsingStream(path);
+            file.FileWriteUsingStream(path);
         }
     }
 }
