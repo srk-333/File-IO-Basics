@@ -53,7 +53,7 @@ namespace FileIOBasics
         {
             Console.WriteLine();
             Console.WriteLine("Copy File from one Source to Another Source");
-            string path1 = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample1.txt";
+            string path1 = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\simple1.txt";
             try
             {
                 //Copy method is used to make a copy of an existing file.
@@ -112,6 +112,15 @@ namespace FileIOBasics
                 sw.WriteLine("\nHello world - .net is boring");
                 sw.Close();
             }
+        }
+        //File Writer Stream
+        public void RenameFileName()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Rename A file Using Move method");
+            string path = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample.txt";
+            string newFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\saurav.txt";
+            File.Move(path, newFilePath);
         }
     }
 }
