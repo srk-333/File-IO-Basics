@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FileIOBasics.Json;
 using FileIOBasics.Xml;
+using FileIOBasics.CSV;
 
 namespace FileIOBasics
 {
@@ -14,14 +15,15 @@ namespace FileIOBasics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to File Io Operations");
-            string path = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample.txt";
-            string binaryFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Binary\binary.txt";
-            string jsonFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Json\JsonData.Json";
-            string xmlFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Xml\xmlData.xml";
-            FileOperations(path);
-            BinaryOps(binaryFilePath);
-            JsonOps(jsonFilePath);
-            XmlOps(xmlFilePath);
+            //string path = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample.txt";
+            //string binaryFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Binary\binary.txt";
+            //string jsonFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Json\JsonData.Json";
+            //string xmlFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Xml\xmlData.xml";
+            //FileOperations(path);
+            //BinaryOps(binaryFilePath);
+            //JsonOps(jsonFilePath);
+            //XmlOps(xmlFilePath);
+            Program.CsvFileOps();
             Console.ReadKey();
         }
         //Method to call all methods of FileOperation class.
@@ -53,7 +55,16 @@ namespace FileIOBasics
         public static void XmlOps(string path)
         {
             XmlOperation.XmlSerialization(path);
-            XmlOperation.XmlDeSerialization(path);
+            XmlOperation.XmlDeSerialization(path);         
+        }
+        //Method to call JsonOperation class methods
+        public static void CsvFileOps()
+        {
+            string csvFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\CSV\CsvData.csv";
+            CsvFileHelper.CsvSerialization(csvFilePath);
+            CsvFileHelper.CsvDeserialization(csvFilePath);
+            CsvFileHelper.ReadFromCsvAndWriteIntoJson(csvFilePath);
+            CsvFileHelper.ReadFromJsonAndWriteIntoCsv();
         }
     }
 }
