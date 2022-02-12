@@ -15,15 +15,15 @@ namespace FileIOBasics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to File Io Operations");
-            //string path = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample.txt";
-            //string binaryFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Binary\binary.txt";
-            //string jsonFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Json\JsonData.Json";
-            //string xmlFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Xml\xmlData.xml";
-            //FileOperations(path);
-            //BinaryOps(binaryFilePath);
-            //JsonOps(jsonFilePath);
-            //XmlOps(xmlFilePath);
-            Program.CsvFileOps();
+            string path = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Files\sample.txt";
+            string binaryFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Binary\binary.txt";
+            string jsonFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Json\JsonData.Json";
+            string xmlFilePath = @"E:\RfaBatch\File-IO-Basics\FileIOBasics\Xml\xmlData.xml";
+            FileOperations(path);
+            BinaryOps(binaryFilePath);
+            JsonOps(jsonFilePath);
+            XmlOps(xmlFilePath);
+            CsvFileOps();
             Console.ReadKey();
         }
         //Method to call all methods of FileOperation class.
